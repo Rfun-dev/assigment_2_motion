@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_item_course"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    app:cardCornerRadius="16dp"
+    android:layout_marginBottom="30dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imv_item_layout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/react_js"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_question_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/question_vote"
+            android:textColor="@color/purple"
+            app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+            app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/question"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/tv_question_vote"
+            app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/score"
+            android:textColor="@color/purple"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/score_int"
+            android:textColor="@color/gray"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tv_score_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+        android:id="@+id/tv_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/minutes"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_text" />
+
+        <TextView
+            android:id="@+id/tv_time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/remaining"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/tv_min"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_all_home"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/radius_box_purple"
+            android:text="@string/continue_test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/june_4th_2023"
+            android:textColor="@color/gray"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/imv_item_layout"
+            app:layout_constraintTop_toBottomOf="@+id/tv_score" />
+
+        <ImageButton
+            android:id="@+id/imb_delete_detail"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/trash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
